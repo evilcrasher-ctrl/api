@@ -8,8 +8,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
-      --main: blue;
-      --second: #aa55ff;
+      --main: red;
+      --second: #ffa500;
       --bg: #0e0e0e;
       --text: #eeeeee;
     }
@@ -126,7 +126,7 @@
       color: white;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* efek glow biru */
+      box-shadow: 0 0 10px var(--main); /* efek glow biru */
       border: 1px solid #444;
       max-width: 100px;
     }
@@ -152,6 +152,23 @@
       color: black;
       width: 100%;
       padding: 14px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 0 15px var(--main);
+      transition: 0.3s;
+      margin-top: 30px;
+    }
+    button2 {
+      background: linear-gradient(135deg, var(--main), var(--second));
+      border: none;
+      color: black;
+      width: 100%;
+      padding: 12px;
       border-radius: 50px;
       font-size: 1rem;
       cursor: pointer;
@@ -199,25 +216,24 @@
 <body>
   <div id="particles-js"></div>
   <div id="login-box" class="glass-box">
-  <h1 style="text-align: center;">Darkness Api Bug</h1>
-    <h3>Login</h3>
+  <h1 style="text-align: center;">Sahdow Death</h1>
+  <h1 style="text-align: center:">Api Bug</h1>
     <input type="text" id="username" placeholder="Username" />
     <input type="password" id="password" placeholder="Password" />
     <button onclick="login()"><i class="fas fa-sign-in-alt"></i> Login</button>
     <div id="login-result" style="margin-top:10px; text-align:center;"></div>
-    <div class="contact" style="margin-top: 30px; color: white; text-align: center;">
-        <p>Buy Akses Chat:</p>
-        <a href="https://t.me/NotNotxxx" target="_blank" style="color: #00acee; text-decoration: none;">
-          <i class="fab fa-telegram"></i> @Darkness
+    <button2 class="contact" style="margin-top: 15px; color: black; text-align: center;">
+        <p>Buy Akses</p>
+        <a href="https://t.me/VynzNotDev" target="_blank" style="color: #00acee; text-decoration: none;">
         </a>
-      </div>
+      </button2>
     </div>
 
   <div class="glass-box" id="main-box" style="display:none;">
     <div class="profile">
-      <img src="https://files.catbox.moe/ybnudt.jpg" alt="profile">
+      <img src="https://files.catbox.moe/v4wr9o.jpg" alt="profile">
       <div class="profile-info">
-        <h2 id="userLabel" style="text-align: center;">Darkness Api Bug</h2>
+        <h2 id="userLabel" style="text-align: center;">Sahdow Death Api Bug</h2>
         <span class="status"><i class="fas fa-circle" style="color:#00ff00"></i> Server Online</span>
       </div>
     </div>
@@ -235,12 +251,11 @@
     </div>
     <button id="sendBtn" onclick="sendBug()"></i> Send Bug</button>
     <button-two onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button-two>
-    <div class="contact" style="margin-top: 30px; color: white; text-align: center;">
-        <p>Contact Developer:</p>
-        <a href="https://t.me/NotNotxxx" target="_blank" style="color: #00acee; text-decoration: none;">
-          <i class="fab fa-telegram"></i> @Darkness
+    <button2 class="contact" style="margin-top: 30px; color: white; text-align: center;">
+        <p>Contact Developer</p>
+        <a href="https://t.me/VynzNotDev" target="_blank" style="color: #00acee; text-decoration: none;">
         </a>
-      </div>
+      </button2>
 
     <div id="adminPanel" style="display:none; margin-top: 50px;">
       <h2 style="color: silver; text-align:center;"> Admin Setting
@@ -272,12 +287,11 @@
 
       <div id="result"></div>
 
-      <div class="contact" style="margin-top: 30px; color: white; text-align: center;">
-        <p>Contact Developer:</p>
-        <a href="https://t.me/NotNotxxx" target="_blank" style="color: #00acee; text-decoration: none;">
-          <i class="fab fa-telegram"></i> @Darkness
+      <button2 class="contact" style="margin-top: 30px; color: white; text-align: center;">
+        <p>Contact Developer</p>
+        <a href="https://t.me/VynzNotDev" target="_blank" style="color: #00acee; text-decoration: none;">
         </a>
-      </div>
+      </button2>
     </div>
   </div>
 
@@ -296,10 +310,8 @@ particlesJS("particles-js", {
 });
 
 const defaultUsers = [
-  { username: "admin", password: "88", role: "admin" },
-  { username: "cella", password: "bughunter", role: "user" },
-  { username: "calista", password: "sandi123", role: "user" },
-  { username: "darknes", password: "sandi123", role: "admin" }
+  { username: "admin", password: "123", role: "admin" },
+  { username: "user", password: "123", role: "user" },
 ];
 
 function getUsers() {
